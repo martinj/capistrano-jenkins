@@ -65,7 +65,7 @@ Capistrano::Configuration.instance.load do
         if build['building'] and not retrying then
           retrying = agree "The requested revision is currently building, Retry? yes/no: "
           if retrying then
-            put "Retrying in #{jenkins_retry_sleep} seconds."
+            puts "Retrying in #{jenkins_retry_sleep} seconds."
             sleep jenkins_retry_sleep
             redo
           end
