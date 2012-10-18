@@ -1,0 +1,14 @@
+PATH
+  remote: .
+  specs:
+    capistrano-jenkins (0.1)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  capistrano-jenkins!
