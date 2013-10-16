@@ -49,6 +49,10 @@ Capistrano::Configuration.instance.load do
       retrying = false
       [0].each do |i|
         sha = `git ls-remote #{repository} #{branch}`.sub!(/\s+.*$/, '').chomp
+        puts "First sha #{sha}"
+        #if it was a tag we need to get the sha to the commit
+        sha = `git log --pretty=format:'%H' -n1 #{sha}`.chomp
+        puts "Second sha #{sha}"
         build = get_build(sha, fetch_json("#{jenkins_url}/job/#{jenkins_job_name}/api/json?depth=1"))
 
         unless build then

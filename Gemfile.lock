@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    capistrano-jenkins (0.1)
+    capistrano-jenkins (0.1.2)
 
 GEM
   remote: http://rubygems.org/
